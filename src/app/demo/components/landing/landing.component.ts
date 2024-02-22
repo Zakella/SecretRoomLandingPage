@@ -22,4 +22,8 @@ export class LandingComponent implements OnDestroy {
     ngOnDestroy() {
         this.subscription.unsubscribe();
     }
+
+    folowInstagram() {
+
+    }
 }

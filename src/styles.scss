@@ -17,3 +17,28 @@ $gutter: 1rem; //for primeflex grid system
 @import "assets/demo/styles/flags/flags.css";
 @import "assets/demo/styles/badges.scss";
 @import "assets/demo/styles/code.scss";
+
+span {
+    font-family: BentonSans, Helvetica, Arial, sans-serif;
+}
+
+
+.vs-button {
+
+    border: var(--standart-color);
+    background-color: var(--standart-color);
+
+}
+
+:root {
+    --standart-color: rgb(255, 176, 196);
+    --form-color:rgb(244, 209, 218);
+}
+
+.label {
+    font-family: BentonSans, Helvetica, Arial, sans-serif;
+    font-size: 0.9rem;
+    line-height: 5px;
+    letter-spacing: 0.05em;
+    /* Additional styles for the label */
+}

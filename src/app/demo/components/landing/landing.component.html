@@ -62,7 +62,7 @@
                                         <button pButton pRipple type="button" pStyleClass="@grandparent" enterClass="ng-hidden"
                         enterActiveClass="px-fadein" leaveToClass="ng-hidden" label="Instagram"
                             icon="pi pi-instagram"
-                        class="m-0 mt-3 md:mt-0 md:ml-5 white-space-nowrap vs-button"></button>
+                        class="m-0 mt-3 md:mt-0 md:ml-5 white-space-nowrap p-button-outlined"></button>
                 </li>
             </ul>
 
@@ -72,211 +72,104 @@
                 class="grid grid-nogutter justify-content-between align-items-center mb-6 py-6 md:mb-8 md:py-8">
                 <div
                     class="col-12 md:col-4 flex flex-column gap-4 flex-order-1 md:flex-order-0 align-items-center md:align-items-start text-center md:text-left">
-                    <span class="block text-900 font-bold text-4xl">Modern, stylish and clean</span>
-                    <span class="block text-700 text-lg">The ultimate collection of design-agnostic, flexible and
-                        accessible UI Components.</span>
+                    <span class="block text-900 font-bold text-4xl">Первый магазин в Молдове Victoria's Secret и Bath & Body Works</span>
+                    <span class="block text-700 text-lg">Впервые в Молдове – магазин, который превращает покупку нижнего белья в искусство.</span>
                     <ul class="flex flex-wrap gap-5 list-none p-0">
                         <li class="flex align-items-center">
-                            <div class="p-1 border-circle bg-green-400 inline-block mr-2"></div>
-                            <span class="text-900 font-semibold">Javascript</span>
+                            <div class="p-1 border-circle bg-pink-200 inline-block mr-2"></div>
+                            <span class="text-900 font-semibold">Victoria'S Secret</span>
                         </li>
                         <li class="flex align-items-center">
-                            <div class="p-1 border-circle bg-green-400 inline-block mr-2"></div>
-                            <span class="text-900 font-semibold">TypeScript</span>
-                        </li>
-                        <li class="flex align-items-center">
-                            <div class="p-1 border-circle bg-green-400 inline-block mr-2"></div>
-                            <span class="text-900 font-semibold">Angular</span>
+                            <div class="p-1 border-circle bg-blue-400 inline-block mr-2"></div>
+                            <span class="text-900 font-semibold">Bath & Body Works</span>
                         </li>
                     </ul>
                     <button pButton pRipple type="button" label="Live Preview" icon="pi pi-arrow-right" iconPos="right"
-                        class="w-12rem p-button-outlined"></button>
+                        class="w-12rem p-button-outlined vs-button"></button>
                 </div>
 
                 <div class="col-12 md:col-7 flex-order-0 md:flex-order-1 mb-6 md:mb-0 border-round">
-                    <img animateEnter="moveinright"
-                        src="assets/demo/images/landing/{{darkMode ? 'dashboard-dark' : 'dashboard-light'}}.png" alt=""
-                        class="w-full h-full border-round shadow-2 animation-duration-1000 animation-ease-out">
+
+                    <p-galleria [value]="images" [responsiveOptions]="galleriaResponsiveOptions"
+                                [containerStyle]="{'max-width': '800px', 'margin':'auto'}" [numVisible]="6" [circular]="true">
+                        <ng-template pTemplate="item" let-item>
+                            <img [src]="item.itemImageSrc" style="width: 100%; display: block;"/>
+                        </ng-template>
+                        <ng-template pTemplate="thumbnail" let-item>
+                            <div class="grid nogutter justify-center">
+                                <img [src]="item.thumbnailImageSrc" style="display: block;"/>
+                            </div>
+                        </ng-template>
+                    </p-galleria>
+<!--                    <img animateEnter="moveinright"-->
+<!--                        src="assets/demo/images/landing/{{darkMode ? 'dashboard-dark' : 'dashboard-light'}}.png" alt=""-->
+<!--                        class="w-full h-full border-round shadow-2 animation-duration-1000 animation-ease-out">-->
                 </div>
             </div>
 
             <div id="apps" class="my-6 md:my-8">
-                <span class="text-900 block font-bold text-5xl mb-4 text-center">Apps</span>
-                <span class="text-700 block text-xl mb-8 text-center line-height-3">Lorem ipsum dolor sit, amet
-                    consectetur adipisicing elit. Velit numquam eligendi quos.</span>
 
-                <div class="flex flex-column lg:flex-row align-items-center justify-content-between mt-8 gap-8">
-                    <div class="flex flex-column align-items-center">
-                        <img animateEnter="scalein"
-                            src="assets/demo/images/landing/{{darkMode ? 'chat-dark' : 'chat-light'}}.png" alt="chat"
-                            class="w-full h-full border-round surface-border shadow-2 animation-duration-500 origin-top">
-                        <span class="block text-900 text-lg font-semibold mt-4">Chat</span>
-                    </div>
-                    <div class="flex flex-column align-items-center">
-                        <img animateEnter="scalein"
-                            src="assets/demo/images/landing/{{darkMode ? 'mail-dark' : 'mail-light'}}.png" alt="chat"
-                            class="w-full h-full border-round surface-border shadow-2 animation-duration-500 origin-top">
-                        <span class="block text-900 text-lg font-semibold mt-4">Mail</span>
-                    </div>
-                    <div class="flex flex-column align-items-center">
-                        <img animateEnter="scalein"
-                            src="assets/demo/images/landing/{{darkMode ? 'kanban-dark' : 'kanban-light'}}.png"
-                            alt="chat"
-                            class="w-full h-full border-round surface-border shadow-2 animation-duration-500 origin-top">
-                        <span class="block text-900 text-lg font-semibold mt-4">Kanban</span>
-                    </div>
-                </div>
-            </div>
 
-            <div id="pricing" class="my-6 py-6 md:my-8 md:py-8">
-                <div class="text-900 font-bold text-5xl mb-4 text-center">Pricing Plans</div>
-                <div class="text-700 text-xl mb-8 text-center line-height-3">Choose a plan that works best for you and
-                    your team.</div>
 
-                <div class="grid grid-nogutter justify-content-center mt-8">
-                    <div class="col-12 lg:col-6 xl:col-4">
-                        <div class="p-3 h-full">
-                            <div class="shadow-2 p-6 h-full flex flex-column surface-card" style="border-radius: 6px">
-                                <span class="text-900 block font-medium text-xl mb-2 text-center">Basic Licence</span>
-                                <span class="font-bold block text-2xl text-900 text-center">$29</span>
+<!--                <block-viewer header="Square Images" >-->
+                    <div class="surface-section px-4 py-8 md:px-6 lg:px-8">
+                        <div class="flex justify-content-center" >
 
-                                <ul class="list-none p-0 m-0 flex-grow-1 mt-6">
-                                    <li class="flex align-items-center mb-3">
-                                        <i class="pi pi-check text-green-500 mr-2"></i>
-                                        <span>Up to 10 Active Users</span>
-                                    </li>
-                                    <li class="flex align-items-center mb-3">
-                                        <i class="pi pi-check text-green-500 mr-2"></i>
-                                        <span>Up to 30 Project Integrations</span>
-                                    </li>
-                                    <li class="flex align-items-center mb-3">
-                                        <i class="pi pi-check text-green-500 mr-2"></i>
-                                        <span>Analytics Module</span>
-                                    </li>
-                                    <li class="flex align-items-center mb-3">
-                                        <i class="pi pi-times text-red-500 mr-2"></i>
-                                        <span>Finance Module</span>
-                                    </li>
-                                </ul>
+                            <p-image src="assets/demo/images/logo/Victorias-Secret-Logo-Cut.png" alt="Image" width="350"></p-image>
+                            <!--                    <a href="" class="flex">-->
+                            <!--                        <img src="assets/demo/images/logo/Victorias-Secret-Logo-Cut.png" alt="Image" height="45">-->
+                            <!--                    </a>-->
+                        </div>
+                        <div class="text-900 font-bold text-3xl text-center mt-4 ">Feature Title</div>
+                        <p class="text-600 font-medium text-xl text-center mt-4">Vulputate eu scelerisque felis imperdiet proin. Eget arcu dictum varius duis at consectetur lorem donec.</p>
 
-                                <button pButton pRipple label="Choose Plan" class="px-5 w-full mt-6 p-button-outlined"
-                                    icon="pi pi-arrow-right" iconPos="right"></button>
+                        <div class="grid mt-7 -mr-3 -ml-3">
+                            <div class="xs:col-12 sm:col-6 lg:col-3 p-4 flex flex-column text-center ">
+                                <img src="https://www.victoriassecret.com/p/280x373/tif/ed/d9/edd962a8ce864440a12eafa62c492201/112047177928_OF_F.jpg" alt="product" class="w-full h-full border-round">
+                                <div class="text-900 text-xl mt-4">Facilisis gravida neque</div>
+                                <p class="text-600 mt-3 line-height-3">Potenti nullam ac tortor vitae. Aliquet bibendum enim facilisis gravida neque convallis a cras semper.</p>
+                            </div>
+                            <div class="xs:col-12 sm:col-6 lg:col-3 p-4 flex flex-column text-center ">
+                                <img src="https://www.victoriassecret.com/p/504x672/png/zz/24/01/30/10/1123669165NI_OM_F.jpg" alt="product" class="w-full h-full border-round">
+                                <div class="text-900 text-xl mt-4">Facilisis gravida neque</div>
+                                <p class="text-600 mt-3 line-height-3">Potenti nullam ac tortor vitae. Aliquet bibendum enim facilisis gravida neque convallis a cras semper.</p>
+                            </div>
+                            <div class="xs:col-12 sm:col-6 lg:col-3 p-4 flex flex-column text-center">
+                                <img src="https://www.victoriassecret.com/p/760x1013/tif/zz/23/05/12/23/1123063554A2_OM_F.jpg" alt="product" class="w-full h-full border-round">
+                                <div class="text-900 text-xl mt-4">Facilisis gravida neque</div>
+                                <p class="text-600 mt-3 line-height-3">Potenti nullam ac tortor vitae. Aliquet bibendum enim facilisis gravida neque convallis a cras semper.</p>
+                            </div>
+                            <div class="xs:col-12 sm:col-6 lg:col-3 p-4 flex flex-column text-center ">
+                                <img src="https://www.victoriassecret.com/p/760x1013/tif/zz/23/06/08/03/1122916054A2_OM_F.jpg" alt="product" class="w-full h-full border-round">
+                                <div class="text-900 text-xl mt-4">Facilisis gravida neque</div>
+                                <p class="text-600 mt-3 line-height-3">Potenti nullam ac tortor vitae. Aliquet bibendum enim facilisis gravida neque convallis a cras semper.</p>
                             </div>
                         </div>
                     </div>
 
-                    <div class="col-12 lg:col-6 xl:col-4">
-                        <div class="p-3 h-full">
-                            <div class="shadow-2 p-6 h-full flex flex-column surface-card" style="border-radius: 6px">
-                                <span class="text-900 block font-medium text-xl mb-2 text-center">Extended
-                                    Licence</span>
-                                <span class="font-bold block text-2xl text-900 text-center">$49</span>
 
-                                <ul class="list-none p-0 m-0 flex-grow-1 mt-6">
-                                    <li class="flex align-items-center mb-3">
-                                        <i class="pi pi-check text-green-500 mr-2"></i>
-                                        <span>Up to 10 Active Users</span>
-                                    </li>
-                                    <li class="flex align-items-center mb-3">
-                                        <i class="pi pi-check text-green-500 mr-2"></i>
-                                        <span>Up to 30 Project Integrations</span>
-                                    </li>
-                                    <li class="flex align-items-center mb-3">
-                                        <i class="pi pi-check text-green-500 mr-2"></i>
-                                        <span>Analytics Module</span>
-                                    </li>
-                                    <li class="flex align-items-center mb-3">
-                                        <i class="pi pi-times text-red-500 mr-2"></i>
-                                        <span>Finance Module</span>
-                                    </li>
-                                </ul>
-
-                                <button pButton pRipple label="Choose Plan" class="px-5 w-full mt-6 p-button-outlined"
-                                    icon="pi pi-arrow-right" iconPos="right"></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
 
-            <div id="features" class="my-6 py-6 md:my-8 md:py-8">
-                <span class="text-900 block font-bold text-5xl mb-4 text-center">Features</span>
-                <span class="text-700 block text-xl mb-8 text-center line-height-3">PrimeTek Informatics is the author
-                    of PrimeReact, a UI Component vendor with well known vastly popular projects including PrimeFaces,
-                    PrimeNG and PrimeVue.</span>
-
-                <div class="grid mt-8">
-                    <div class="col-12 md:col-6 xl:col-3 flex justify-content-center p-3">
-                        <div class="box p-4 w-full surface-card surface-border border-1 border-round">
-                            <img src="assets/demo/images/landing/icon-components.svg" alt="components icon"
-                                class="block mb-3" />
-                            <span class="text-900 block font-semibold mb-3 text-lg">90+ UI Components</span>
-                            <p class="m-0 text-secondary text-700">The ultimate set of UI Components to assist you with
-                                90+ impressive Angular Components.</p>
+            <div class="surface-section px-4 py-8 md:px-6 lg:px-8">
+                <div class="grid -mr-4 -ml-4 flex-column xl:flex-row">
+                    <div class="col-12 xl:col-6 p-4">
+                        <div class="bg-blue-100 border-round flex flex-column justify-content-center h-full p-6">
+                            <svg version="1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 517.2 50">
+                                <title>Bath and Body Works</title>
+                                <path d="M26.2 18.5v-.1c4.6-1.1 6.7-4.6 6.7-8.3 0-5.5-3.2-9.8-10.8-9.8H0V39h21.6c6 0 12.8-3 12.8-11.1.1-4.9-3-8.6-8.2-9.4zM4 4h17.3c4.4 0 7.6 1.5 7.6 6.2 0 5.2-3.5 6.9-8.9 6.9H4V4zm17 31.4H4V20.8h17.9c4.7 0 8.2 1.6 8.2 7.2 0 5.3-3.9 7.4-9.1 7.4zm44.5-2.3V18.3c0-5.4-3.5-8.4-13-8.4-9.7 0-12.9 3.6-13.5 9.5h3.7c.3-4.5 3.3-6.2 9.7-6.2 6.6 0 9.4 1.5 9.4 5.5 0 2.8-1.1 3.3-9.9 3.7-6.2.3-14.1 1.2-14.1 8.8 0 6.3 6.2 8.5 11 8.5 9.3 0 12-3.8 13.2-5.6h.1c.1 2.2.3 5 4.4 5 1.3 0 2.6-.3 3.4-.4V36c-.7.1-1.4.1-2.1.1-1.7.1-2.3-.7-2.3-3zm-3.7-4.9c0 5.8-6.4 8.7-11.8 8.7-4.4 0-8.2-1.3-8.2-5.7 0-3.4 2.7-4.8 7.4-5.2 8.1-.8 10.8-1 12.6-2.1v4.3zM79.4 2h-4v8.9h-6.2v3h6.2v18.6c0 4.6 1.4 7 7.6 7 1.3 0 2.9-.1 4.4-.3v-3.4c-.8.2-2 .3-4 .3-3.3 0-4-1.1-4-3.6V13.9h8v-3h-8V2zm29.4 8c-6.3 0-10.5 3.4-11.7 6.4H97V0h-4v39.1h4V23.8c0-6.4 3.6-10.4 11.5-10.4 5.1 0 8.5 2 8.5 7.5v18.2h4V21.6c0-6.7-2.8-11.6-12.2-11.6zm57.6 12.3h-3.7c-.2 1.6-.9 4.9-2.1 6.5l-11.9-11.2c4-1.7 8.1-4.4 8.1-9.4 0-3.6-2.4-7.9-9.5-7.9-5.7 0-9.5 3.3-9.5 8 0 3.6 2.1 5.9 4.9 8.5C135.2 20 132 23 132 28.4c0 6.6 4.8 11.6 14.7 11.6 6.2 0 11.6-2.2 14.4-5.7l5.1 4.8h5.5l-8.3-7.8c2-3.1 3-6.9 3-9zM141.6 8.2c0-2.8 2.7-4.5 5.4-4.5 4.4 0 6.1 2.2 6.1 4.7 0 2.8-2.1 5-6.8 7.1-4.3-4.3-4.7-5.7-4.7-7.3zm5.3 28.4c-7.6 0-10.9-3.9-10.9-8 0-4.3 2.9-7.1 9-9.4l13.4 12.7c-3.4 3.6-6.9 4.7-11.5 4.7zM210 18.5v-.1c4.6-1.1 6.7-4.6 6.7-8.3 0-5.5-3.2-9.8-10.8-9.8h-22.1V39h21.6c6 0 12.8-3 12.8-11.1 0-4.9-3.1-8.6-8.2-9.4zM187.8 4h17.3c4.4 0 7.6 1.5 7.6 6.2 0 5.2-3.5 6.9-8.9 6.9h-16V4zm16.9 31.4h-16.9V20.8h17.9c4.7 0 8.2 1.6 8.2 7.2-.1 5.3-4 7.4-9.2 7.4zm33-25.4c-10.9 0-16.1 7.1-16.1 15s5.2 15 16.1 15c10.9 0 16.1-7.1 16.1-15s-5.2-15-16.1-15zm0 26.6c-7.6 0-12-4.8-12-11.6s4.4-11.6 12-11.6 12 4.8 12 11.6c.1 6.7-4.3 11.6-12 11.6zm47.5-20.1h-.1c-1.9-3.6-6.2-6.5-11.5-6.5-10.6 0-15.4 7.1-15.4 15 0 6.9 3.8 15 15.4 15 6.9 0 10.5-4.1 11.5-6.5h.1v5.6h4V0h-4v16.5zm-11.6 20.1c-8.2 0-11.4-6-11.4-11.6 0-7.2 5-11.6 11.4-11.6 8.2 0 11.9 5.8 11.9 11.6-.1 7.3-5.3 11.6-11.9 11.6zm34.9-2.3L297 10.8h-4.4l13.8 28.4-1.9 3.9c-1.3 2.8-2.7 3.5-5.6 3.5-1.1 0-2-.1-2.9-.1v3.4c1.2.1 2.6.1 3.9.1 4.5 0 6.2-1.2 8.3-5.7l15.4-33.5h-4.4l-10.7 23.5zm76.2-34l-10.9 33.4h-.1L362.2.3h-5l-11.5 33.4h-.1L334.9.3h-4.5L343.3 39h4.7l11.5-33h.1l11.7 33.1h4.7L389.1.4h-4.4zm20.1 9.7c-10.9 0-16.1 7.1-16.1 15s5.2 15 16.1 15c10.9 0 16.1-7.1 16.1-15s-5.2-15-16.1-15zm0 26.6c-7.6 0-12-4.8-12-11.6s4.4-11.6 12-11.6 12 4.8 12 11.6c0 6.7-4.4 11.6-12 11.6zm26-19.3h-.1v-6.5h-4V39h4V24.7c0-8 5.3-10.7 9.6-10.7 1.3 0 2.4.1 3.7.3v-4.1c-.6-.1-1.3-.2-2.4-.2-6.7 0-9.4 3.9-10.8 7.3zm43.7-6.5h-6l-17.3 13.7V0h-4v39.1h4V29l6.4-4.8 12.6 14.9h5.3l-14.9-17.5 13.9-10.8zm16.2 12c-8.6-1.1-10.5-1.7-10.5-4.7 0-3.9 3.9-4.8 8.2-4.8 5.9 0 8.7 1.3 9.7 5.9h3.7c-.5-5.9-4.2-9.2-13.4-9.2-8.2 0-12.2 3.5-12.2 8.4 0 5 3.1 7.1 11.9 7.9 8.8.9 10.8 2.1 10.8 4.9 0 4.2-3.8 5.4-9.4 5.4-7.2 0-9.9-1.6-10.6-6.3h-3.7c0 6.8 5.3 9.7 14.3 9.7 8.9 0 13.4-3.4 13.4-9 0-5.5-3.6-7-12.2-8.2zm21.6-13.1c-2.7 0-4.9 2.2-4.9 4.9s2.2 4.9 4.9 4.9 4.9-2.2 4.9-4.9-2.2-4.9-4.9-4.9zm0 9.2c-2.4 0-4.3-1.9-4.3-4.3s1.9-4.3 4.3-4.3 4.3 1.9 4.3 4.3c-.1 2.4-1.9 4.3-4.3 4.3zm2.3-5.6c0-1-.6-1.6-1.9-1.6h-2.2v5.8h.7v-2.6h1.2l1.7 2.6h.8l-1.8-2.6c.8-.1 1.5-.6 1.5-1.6zm-3.5 1v-2.1h1.5c.7 0 1.4.2 1.4 1s-.6 1.1-1.4 1.1h-1.5z" fill="#005699"/>
+                            </svg>
+                            <div class="text-yellow-900 text-3xl font-medium">Открой для себя Bath & Body Works</div>
+                            <p class="text-yellow-800 text-xl line-height-3">Vulputate eu scelerisque felis imperdiet proin. Eget arcu dictum varius duis at consectetur lorem donec.</p>
                         </div>
                     </div>
-                    <div class="col-12 md:col-6 xl:col-3 flex justify-content-center p-3">
-                        <div class="box p-4 w-full surface-card surface-border border-1 border-round">
-                            <img src="assets/demo/images/landing/icon-community.svg" alt="components icon"
-                                class="block mb-3" />
-                            <span class="text-900 block font-semibold mb-3 text-lg">Community</span>
-                            <p class="m-0 text-secondary text-700">Connect with the other open source community members,
-                                collaborate and have a voice in the project roadmap.</p>
-                        </div>
+                    <div class="col-12 xl:col-6 p-4">
+                        <img src="https://cdn-fsly.yottaa.net/5d669b394f1bbf7cb77826ae/www.bathandbodyworks.com/v~4b.21a/on/demandware.static/-/Sites-BathAndBodyWorks-Library/default/dweac1a5ee/2023/sp2_000246914_000260176_can_3wtrop_sit_vn_01_00.jpg?yocs=w_A_" class="w-full" alt="product">
                     </div>
-                    <div class="col-12 md:col-6 xl:col-3 flex justify-content-center p-3">
-                        <div class="box p-4 w-full surface-card surface-border border-1 border-round">
-                            <img src="assets/demo/images/landing/icon-productivity.svg" alt="components icon"
-                                class="block mb-3" />
-                            <span class="text-900 block font-semibold mb-3 text-lg">Productivity</span>
-                            <p class="m-0 text-secondary text-700">Boost your productivity by achieving more in less
-                                time and accomplish amazing results.</p>
-                        </div>
+                    <div class="col-12 xl:col-6 p-4">
+                        <img src="https://cdn-fsly.yottaa.net/5d669b394f1bbf7cb77826ae/www.bathandbodyworks.com/v~4b.21a/on/demandware.static/-/Sites-bbw-storefront-catalog-en/default/dwc48345d9/sp2_000261416_000261894_bc_bsmss_sit_s_01_00.jpg?yocs=w_A_" class="w-full" alt="product">
                     </div>
-                    <div class="col-12 md:col-6 xl:col-3 flex justify-content-center p-3">
-                        <div class="box p-4 w-full surface-card surface-border border-1 border-round">
-                            <img src="assets/demo/images/landing/icon-accessibility.svg" alt="components icon"
-                                class="block mb-3" />
-                            <span class="text-900 block font-semibold mb-3 text-lg">Accessibility</span>
-                            <p class="m-0 text-secondary text-700">The ultimate set of UI Components to assist you with
-                                90+ impressive Angular Components.</p>
-                        </div>
-                    </div>
-                    <div class="col-12 md:col-6 xl:col-3 flex justify-content-center p-3">
-                        <div class="box p-4 w-full surface-card surface-border border-1 border-round">
-                            <img src="assets/demo/images/landing/icon-support.svg" alt="components icon"
-                                class="block mb-3" />
-                            <span class="text-900 block font-semibold mb-3 text-lg">Enterprise Support</span>
-                            <p class="m-0 text-secondary text-700">Exceptional support service featuring response within
-                                1 business day and option to request enhancements and new features for the library.</p>
-                        </div>
-                    </div>
-                    <div class="col-12 md:col-6 xl:col-3 flex justify-content-center p-3">
-                        <div class="box p-4 w-full surface-card surface-border border-1 border-round">
-                            <img src="assets/demo/images/landing/icon-mobile.svg" alt="components icon"
-                                class="block mb-3" />
-                            <span class="text-900 block font-semibold mb-3 text-lg">Mobile</span>
-                            <p class="m-0 text-secondary text-700">First class support for responsive design led by
-                                touch optimized elements.</p>
-                        </div>
-                    </div>
-                    <div class="col-12 md:col-6 xl:col-3 flex justify-content-center p-3">
-                        <div class="box p-4 w-full surface-card surface-border border-1 border-round">
-                            <img src="assets/demo/images/landing/icon-theme.svg" alt="components icon"
-                                class="block mb-3" />
-                            <span class="text-900 block font-semibold mb-3 text-lg">Themes</span>
-                            <p class="m-0 text-secondary text-700">Built on a design-agnostic api, choose from a vast
-                                amount of themes such as material, bootstrap, custom or develop your own.</p>
-                        </div>
-                    </div>
-                    <div class="col-12 md:col-6 xl:col-3 flex justify-content-center p-3">
-                        <div class="box p-4 w-full surface-card surface-border border-1 border-round">
-                            <img src="assets/demo/images/landing/icon-ts.svg" alt="components icon"
-                                class="block mb-3" />
-                            <span class="text-900 block font-semibold mb-3 text-lg">Typescript</span>
-                            <p class="m-0 text-secondary text-700">Top-notch support for Typescript with types and
-                                tooling assistance.</p>
-                        </div>
+                    <div class="col-12 xl:col-6 p-4">
+                            <img src="https://cdn-fsly.yottaa.net/5d669b394f1bbf7cb77826ae/www.bathandbodyworks.com/v~4b.21a/on/demandware.static/-/Sites-BathAndBodyWorks-Library/default/dwc3f1dfa9/2023/sp2_000315611_000315614_bc_travelviznav_sit_vn_01_00.jpg?yocs=w_A_" class="w-full" alt="product">
                     </div>
                 </div>
             </div>
@@ -284,66 +177,13 @@
             <div class="grid justify-content-between my-6 pt-4 md:my-8">
                 <div class="col-12 md:col-2 text-center md:text-left">
                     <a class="cursor-pointer" href="#">
-                        <svg width="124" height="22" viewBox="0 0 124 22" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path d="M10.4851 0L0 20.9465H3.53702L10.4856 6.07843L17.2944 20.9465H20.9715L10.4851 0Z"
-                                fill="var(--primary-color)" />
-                            <path d="M13.84 15.7927L16.2077 21.0016H11.7682L13.84 15.7927Z"
-                                fill="var(--primary-color)" />
-                            <path d="M9.04645 21.0016L6.67875 15.7927L4.60701 21.0016H9.04645Z"
-                                fill="var(--primary-color)" />
-                            <path
-                                d="M40.9033 14.5217H34.771L33.1753 18.0007H30.8467L37.9346 2.77661L44.772 18.0007H42.4062L40.9033 14.5217ZM40.022 12.49L37.8975 7.61938L35.6709 12.49H40.022Z"
-                                fill="var(--primary-color)" />
-                            <path
-                                d="M52.4927 12.1838V18.0007H50.3311V3.67651H52.7803C53.9802 3.67651 54.8862 3.76001 55.4985 3.927C56.117 4.09399 56.6613 4.40942 57.1314 4.87329C57.954 5.67733 58.3652 6.69165 58.3652 7.91626C58.3652 9.22746 57.9261 10.2665 57.0479 11.0334C56.1696 11.8004 54.9852 12.1838 53.4946 12.1838H52.4927ZM52.4927 10.1799H53.2998C55.2852 10.1799 56.2778 9.4161 56.2778 7.88843C56.2778 6.41024 55.2542 5.67114 53.207 5.67114H52.4927V10.1799Z"
-                                fill="var(--primary-color)" />
-                            <path
-                                d="M63.6367 10.7737C63.6367 8.75741 64.3758 7.02563 65.854 5.57837C67.326 4.1311 69.0949 3.40747 71.1607 3.40747C73.2017 3.40747 74.952 4.13729 76.4116 5.59692C77.8775 7.05656 78.6104 8.80998 78.6104 10.8572C78.6104 12.9167 77.8744 14.664 76.4024 16.0989C74.9242 17.54 73.1398 18.2605 71.0493 18.2605C69.2001 18.2605 67.5394 17.6204 66.0674 16.3401C64.447 14.9237 63.6367 13.0683 63.6367 10.7737ZM65.8169 10.8015C65.8169 12.3848 66.3488 13.6868 67.4126 14.7073C68.4702 15.7278 69.6918 16.238 71.0772 16.238C72.5801 16.238 73.848 15.7185 74.8809 14.6794C75.9138 13.628 76.4302 12.3477 76.4302 10.8386C76.4302 9.31095 75.9199 8.03068 74.8994 6.9978C73.8851 5.95874 72.6296 5.43921 71.1328 5.43921C69.6423 5.43921 68.3836 5.95874 67.357 6.9978C66.3303 8.0245 65.8169 9.2924 65.8169 10.8015Z"
-                                fill="var(--primary-color)" />
-                            <path d="M87.2495 3.67651V15.969H91.4615V18.0007H85.0879V3.67651H87.2495Z"
-                                fill="var(--primary-color)" />
-                            <path d="M99.4327 3.67651V15.969H103.645V18.0007H97.271V3.67651H99.4327Z"
-                                fill="var(--primary-color)" />
-                            <path
-                                d="M108.146 10.7737C108.146 8.75741 108.885 7.02563 110.363 5.57837C111.835 4.1311 113.604 3.40747 115.67 3.40747C117.711 3.40747 119.461 4.13729 120.921 5.59692C122.387 7.05656 123.12 8.80998 123.12 10.8572C123.12 12.9167 122.384 14.664 120.912 16.0989C119.433 17.54 117.649 18.2605 115.559 18.2605C113.709 18.2605 112.049 17.6204 110.577 16.3401C108.956 14.9237 108.146 13.0683 108.146 10.7737ZM110.326 10.8015C110.326 12.3848 110.858 13.6868 111.922 14.7073C112.98 15.7278 114.201 16.238 115.586 16.238C117.089 16.238 118.357 15.7185 119.39 14.6794C120.423 13.628 120.94 12.3477 120.94 10.8386C120.94 9.31095 120.429 8.03068 119.409 6.9978C118.394 5.95874 117.139 5.43921 115.642 5.43921C114.152 5.43921 112.893 5.95874 111.866 6.9978C110.84 8.0245 110.326 9.2924 110.326 10.8015Z"
-                                fill="var(--primary-color)" />
-                        </svg>
+
                     </a>
                 </div>
 
                 <div class="col-12 md:col-10 lg:col-7">
                     <div class="grid text-center md:text-left">
-                        <div class="col-12 md:col-3">
-                            <h4 class="font-medium text-xl line-height-3 mb-3 text-900">Company</h4>
-                            <a class="line-height-3 block cursor-pointer mb-2 text-700">About Us</a>
-                            <a class="line-height-3 block cursor-pointer mb-2 text-700">News</a>
-                            <a class="line-height-3 block cursor-pointer mb-2 text-700">Investor Relations</a>
-                            <a class="line-height-3 block cursor-pointer mb-2 text-700">Careers</a>
-                            <a class="line-height-3 block cursor-pointer text-700">Media Kit</a>
-                        </div>
 
-                        <div class="col-12 md:col-3 mt-4 md:mt-0">
-                            <h4 class="font-medium text-xl line-height-3 mb-3 text-900">Resources</h4>
-                            <a class="line-height-3 block cursor-pointer mb-2 text-700">Get Started</a>
-                            <a class="line-height-3 block cursor-pointer mb-2 text-700">Learn</a>
-                            <a class="line-height-3 block cursor-pointer text-700">Case Studies</a>
-                        </div>
-
-                        <div class="col-12 md:col-3 mt-4 md:mt-0">
-                            <h4 class="font-medium text-xl line-height-3 mb-3 text-900">Community</h4>
-                            <a class="line-height-3 block cursor-pointer mb-2 text-700">Discord</a>
-                            <a class="line-height-3 block cursor-pointer mb-2 text-700">Events</a>
-                            <a class="line-height-3 block cursor-pointer mb-2 text-700">FAQ</a>
-                            <a class="line-height-3 block cursor-pointer text-700">Blog</a>
-                        </div>
-
-                        <div class="col-12 md:col-3 mt-4 md:mt-0">
-                            <h4 class="font-medium text-xl line-height-3 mb-3 text-900">Legal</h4>
-                            <a class="line-height-3 block cursor-pointer mb-2 text-700">Brand Policy</a>
-                            <a class="line-height-3 block cursor-pointer mb-2 text-700">Privacy Policy</a>
-                            <a class="line-height-3 block cursor-pointer text-700">Terms of Service</a>
-                        </div>
                     </div>
                 </div>
             </div>

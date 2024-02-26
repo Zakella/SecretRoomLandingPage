@@ -20,6 +20,7 @@ import { AppMenuComponent } from './app.menu.component';
 import { AppMenuitemComponent } from './app.menuitem.component';
 import { RouterModule } from '@angular/router';
 import { ButtonModule } from 'primeng/button';
+import {StoriesModule} from "../components/stories/stories.module";
 
 @NgModule({
     declarations: [
@@ -45,7 +46,9 @@ import { ButtonModule } from 'primeng/button';
         TooltipModule,
         RippleModule,
         RouterModule,
-        AppConfigModule
+        AppConfigModule,
+        StoriesModule
+
     ]
 })
 export class AppLayoutModule { }

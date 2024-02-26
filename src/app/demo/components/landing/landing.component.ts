@@ -1,8 +1,12 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
 import { Router } from '@angular/router';
 import { LayoutService } from 'src/app/layout/service/app.layout.service';
-import { Subscription } from 'rxjs';
+import {Subject, Subscription} from 'rxjs';
 import {PhotoService} from "../../service/photo.service";
+import {StoryModel} from "../../../components/stories/story.model";
+import {STORIES} from "../../../components/stories/stories";
+import {StoriesService} from "../../../components/stories/stories.service";
+import {takeUntil} from "rxjs/operators";
 
 @Component({
     templateUrl: './landing.component.html',
@@ -14,6 +18,10 @@ export class LandingComponent implements OnInit, OnDestroy {
 
     darkMode: boolean = false;
     images: any[] | undefined;
+
+    stories: StoryModel = STORIES;
+    storyIsOpen = false;
+    unSub: Subject<void> = new Subject<void>();
 
     galleriaResponsiveOptions: any[] = [
         {
@@ -35,7 +43,8 @@ export class LandingComponent implements OnInit, OnDestroy {
     ];
 
 
-    constructor(public router: Router, private layoutService: LayoutService, private photoService: PhotoService) {
+    constructor(public router: Router, private layoutService: LayoutService, private photoService: PhotoService,
+                private storiesService: StoriesService) {
         this.subscription = this.layoutService.configUpdate$.subscribe(config => {
             this.darkMode = config.colorScheme === 'dark' || config.colorScheme === 'dim' ? true : false;
         });
@@ -53,5 +62,30 @@ export class LandingComponent implements OnInit, OnDestroy {
 
     folowInstagram() {
 
+    }
+
+    closeStory(): void {
+        this.storyIsOpen = false;
+        this.getStories();
+        document.body.style.overflowY = 'scroll';
+    }
+
+    getStories(): void {
+
+        this.storiesService.changeStories(this.stories.data);
+        this.initStoriesLogic();
+    }
+
+    initStoriesLogic(): void {
+        this.storiesService.changeUsersCount(this.stories.data.length);
+        this.storiesService.activeUserIndex$.pipe(takeUntil(this.unSub)).subscribe(x => {
+            if (x === this.stories.data.length && this.storyIsOpen) {
+                this.storyIsOpen = false;
+            }
+        });
+    }
+
+    openStories() {
+        this.storyIsOpen = true;
     }
 }

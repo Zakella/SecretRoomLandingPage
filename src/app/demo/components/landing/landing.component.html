@@ -10,70 +10,74 @@
 
             </a>
             <a pRipple class="cursor-pointer block md:hidden text-700 text-primary" pStyleClass="@next"
-                enterClass="ng-hidden" enterActiveClass="px-fadein" leaveToClass="ng-hidden"
-                leaveActiveClass="px-fadeout" [hideOnOutsideClick]="true">
+               enterClass="ng-hidden" enterActiveClass="px-fadein" leaveToClass="ng-hidden"
+               leaveActiveClass="px-fadeout" [hideOnOutsideClick]="true">
                 <i class="pi pi-bars text-4xl"></i>
             </a>
-            <ul #menu  style="top:80px; right: 0%;"
+            <ul #menu style="top:80px; right: 0%;"
                 class="list-none  p-3 md:p-0  justify-content-end ng-hidden md:flex absolute md:static w-full md:w-6 md:px-0 z-3 shadow-2 md:shadow-none  surface-card md:surface-ground">
                 <a pRipple class="cursor-pointer block md:hidden text-700 text-primary absolute z-5" style="top:1.5rem;
                 right: 1.5rem;" pRipple pStyleClass="@parent"
-                        enterClass="ng-hidden" enterActiveClass="px-fadein" leaveToClass="ng-hidden" leaveActiveClass="px-fadeout">
+                   enterClass="ng-hidden" enterActiveClass="px-fadein" leaveToClass="ng-hidden"
+                   leaveActiveClass="px-fadeout">
                     <i class="pi pi-times text-3xl"></i>
                 </a>
 
                 <li class=" md:mt-0">
                     <a (click)="router.navigate([''], {fragment: 'home'})" pRipple pStyleClass="@grandparent"
-                        enterClass="ng-hidden" enterActiveClass="px-fadein" leaveToClass="ng-hidden"
-                        class="flex m-0 md:ml-5 px-0 py-3 text-900 font-medium line-height-3 cursor-pointer">
-                        <span>Store</span>
+                       enterClass="ng-hidden" enterActiveClass="px-fadein" leaveToClass="ng-hidden"
+                       class="flex m-0 md:ml-5 px-0 py-3 text-900 font-medium line-height-3 cursor-pointer">
+                        <span>Магазин</span>
                     </a>
                 </li>
                 <li>
-                    <a (click)="router.navigate([''], {fragment: 'apps'})" pRipple pStyleClass="@grandparent"
-                        enterClass="ng-hidden" enterActiveClass="px-fadein" leaveToClass="ng-hidden"
-                        class="flex m-0 md:ml-5 px-0 py-3 text-900 font-medium line-height-3 cursor-pointer">
+                    <a (click)="router.navigate([''], {fragment: 'vs'})" pRipple pStyleClass="@grandparent"
+                       enterClass="ng-hidden" enterActiveClass="px-fadein" leaveToClass="ng-hidden"
+                       class="flex m-0 md:ml-5 px-0 py-3 text-900 font-medium line-height-3 cursor-pointer">
 
                         <span>Victoria's Secret</span>
                     </a>
                 </li>
                 <li>
-                    <a (click)="router.navigate([''], {fragment: 'pricing'})" pRipple pStyleClass="@grandparent"
-                        enterClass="ng-hidden" enterActiveClass="px-fadein" leaveToClass="ng-hidden"
-                        class="flex m-0 md:ml-5 px-0 py-3 text-900 font-medium line-height-3 cursor-pointer">
+                    <a (click)="router.navigate([''], {fragment: 'bb'})" pRipple pStyleClass="@grandparent"
+                       enterClass="ng-hidden" enterActiveClass="px-fadein" leaveToClass="ng-hidden"
+                       class="flex m-0 md:ml-5 px-0 py-3 text-900 font-medium line-height-3 cursor-pointer">
                         <span>Bath & Body Works</span>
                     </a>
                 </li>
                 <li>
                     <a (click)="router.navigate([''], {fragment: 'features'})" pRipple pStyleClass="@grandparent"
-                        enterClass="ng-hidden" enterActiveClass="px-fadein" leaveToClass="ng-hidden"
-                        class="flex m-0 md:ml-5 px-0 py-3 text-900 font-medium line-height-3 cursor-pointer">
+                       enterClass="ng-hidden" enterActiveClass="px-fadein" leaveToClass="ng-hidden"
+                       class="flex m-0 md:ml-5 px-0 py-3 text-900 font-medium line-height-3 cursor-pointer">
                         <span>Stories</span>
                     </a>
                 </li>
 
 
                 <li class="flex align-items-center">
-<!--                    <button pButton pRipple type="button" class="w-full mb-5 vs-button" (click)="folowInstagram()" >-->
-<!--                        <i class="pi pi-instagram"></i>-->
-<!--                        <span class="label" >Instagram</span>-->
-<!--                    </button>-->
+                    <!--                    <button pButton pRipple type="button" class="w-full mb-5 vs-button" (click)="folowInstagram()" >-->
+                    <!--                        <i class="pi pi-instagram"></i>-->
+                    <!--                        <span class="label" >Instagram</span>-->
+                    <!--                    </button>-->
 
-                                        <button pButton pRipple type="button" pStyleClass="@grandparent" enterClass="ng-hidden"
-                        enterActiveClass="px-fadein" leaveToClass="ng-hidden" label="Instagram"
+                    <button pButton pRipple type="button" pStyleClass="@grandparent" enterClass="ng-hidden"
+                            enterActiveClass="px-fadein" leaveToClass="ng-hidden" label="Связаться с нами"
                             icon="pi pi-instagram"
-                        class="m-0 mt-3 md:mt-0 md:ml-5 white-space-nowrap p-button-outlined"></button>
+                            class="m-0 mt-3 md:mt-0 md:ml-5 white-space-nowrap p-button-outlined"></button>
                 </li>
             </ul>
 
         </div>
         <div class="py-4 px-4 mx-0 md:mx-6 lg:mx-8 lg:px-8 z-2">
             <div id="home"
-                class="grid grid-nogutter justify-content-between align-items-center mb-6 py-6 md:mb-8 md:py-8">
+                 class="grid grid-nogutter justify-content-between align-items-center mb-6 py-6 md:mb-8 md:py-8">
                 <div
                     class="col-12 md:col-4 flex flex-column gap-4 flex-order-1 md:flex-order-0 align-items-center md:align-items-start text-center md:text-left">
                     <span class="block text-900 font-bold text-4xl">Первый магазин в Молдове Victoria's Secret и Bath & Body Works</span>
-                    <span class="block text-700 text-lg">Впервые в Молдове – магазин, который превращает покупку нижнего белья в искусство.</span>
+                    <span class="block text-700 text-lg">Впервые в Молдове – магазин мировых брендов нижнего белья и косметики. Откройте для себя мир изысканного стиля которые дарят нам лучшие бренды мира.
+                    </span>
+                    <span class="block text-700 font-bold text-lg"> Торговый центр Атриум, 2 этаж. Victoria's Secret Room</span>
+                    <span class="block text-700 font-bold text-lg"> Доставка по всей Молдове</span>
                     <ul class="flex flex-wrap gap-5 list-none p-0">
                         <li class="flex align-items-center">
                             <div class="p-1 border-circle bg-pink-200 inline-block mr-2"></div>
@@ -85,13 +89,18 @@
                         </li>
                     </ul>
                     <button pButton pRipple type="button" label="Live Preview" icon="pi pi-arrow-right" iconPos="right"
-                        class="w-12rem p-button-outlined vs-button"></button>
+                            class="w-12rem p-button-outlined vs-button"
+                            (click)="openStories()"
+                    ></button>
+
                 </div>
+
 
                 <div class="col-12 md:col-7 flex-order-0 md:flex-order-1 mb-6 md:mb-0 border-round">
 
                     <p-galleria [value]="images" [responsiveOptions]="galleriaResponsiveOptions"
-                                [containerStyle]="{'max-width': '800px', 'margin':'auto'}" [numVisible]="6" [circular]="true">
+                                [containerStyle]="{'max-width': '800px', 'margin':'auto'}" [numVisible]="6"
+                                [circular]="true">
                         <ng-template pTemplate="item" let-item>
                             <img [src]="item.itemImageSrc" style="width: 100%; display: block;"/>
                         </ng-template>
@@ -101,75 +110,119 @@
                             </div>
                         </ng-template>
                     </p-galleria>
-<!--                    <img animateEnter="moveinright"-->
-<!--                        src="assets/demo/images/landing/{{darkMode ? 'dashboard-dark' : 'dashboard-light'}}.png" alt=""-->
-<!--                        class="w-full h-full border-round shadow-2 animation-duration-1000 animation-ease-out">-->
+                    <!--                    <img animateEnter="moveinright"-->
+                    <!--                        src="assets/demo/images/landing/{{darkMode ? 'dashboard-dark' : 'dashboard-light'}}.png" alt=""-->
+                    <!--                        class="w-full h-full border-round shadow-2 animation-duration-1000 animation-ease-out">-->
                 </div>
             </div>
 
-            <div id="apps" class="my-6 md:my-8">
+            <div id="vs" class="my-6 md:my-8">
 
 
+                <!--                <block-viewer header="Square Images" >-->
+                <div class="surface-section px-4 py-8 md:px-6 lg:px-8">
+                    <div class="flex justify-content-center">
 
-<!--                <block-viewer header="Square Images" >-->
-                    <div class="surface-section px-4 py-8 md:px-6 lg:px-8">
-                        <div class="flex justify-content-center" >
+                        <p-image src="assets/demo/images/logo/Victorias-Secret-Logo-Cut.png" alt="Image"
+                                 width="350"></p-image>
+                        <!--                    <a href="" class="flex">-->
+                        <!--                        <img src="assets/demo/images/logo/Victorias-Secret-Logo-Cut.png" alt="Image" height="45">-->
+                        <!--                    </a>-->
+                    </div>
+                    <div class="text-900 font-bold text-3xl text-center mt-4 ">
+                        <span> Лучший мировой бренд женского белья и косметики</span>
+                    </div>
+                    <p class="text-600 font-medium text-xl text-center mt-4">
 
-                            <p-image src="assets/demo/images/logo/Victorias-Secret-Logo-Cut.png" alt="Image" width="350"></p-image>
-                            <!--                    <a href="" class="flex">-->
-                            <!--                        <img src="assets/demo/images/logo/Victorias-Secret-Logo-Cut.png" alt="Image" height="45">-->
-                            <!--                    </a>-->
+
+                        Victoria's Secret – это не просто бренд, это символ женственности, стиля и уверенности. С
+                        момента своего основания в 1977 году, Victoria's Secret зарекомендовала себя как ведущий мировой
+                        бренд в сфере женского нижнего белья, предлагая продукцию высочайшего качества, которая
+                        подчеркивает красоту и индивидуальность каждой женщины.
+
+                        В ассортименте Victoria's Secret каждая женщина найдет что-то для себя – от классического и
+                        комфортного до соблазнительного и роскошного нижнего белья. Каждая коллекция разрабатывается с
+                        учетом последних тенденций моды и нужд современных женщин, обеспечивая идеальное сочетание
+                        стиля, комфорта и качества.
+
+                        Не только нижнее белье, но и линейка косметики, парфюмерии и аксессуаров Victoria's Secret
+                        позволяют женщинам чувствовать себя уверенно и неповторимо каждый день. Изысканные ароматы,
+                        питательные кремы для тела и стильные аксессуары дополнят ваш образ и подчеркнут вашу
+                        уникальность.
+
+                        Посетите магазин Victoria's Secret Room и ощутите всю палитру эмоций от покупок – от волнения
+                        при выборе идеального комплекта до радости от нового приобретения, которое заставит вас
+                        чувствовать себя особенной. Позвольте Victoria's Secret добавить нотку роскоши в вашу
+                        повседневную жизнь и откройте для себя мир, где красота, комфорт и стиль идут рука об руку.
+                    </p>
+
+
+                    <div class="grid mt-7 -mr-3 -ml-3">
+                        <div class="xs:col-12 sm:col-6 lg:col-3 p-4 flex flex-column text-center ">
+                            <img src="assets/vs/VS1.jpg" alt="product" class="w-full h-full border-round">
+                            <div class="text-900 text-xl mt-4">Косметические наборы Victoria's Secret: Роскошь Каждого Дня</div>
+                            <p class="text-600 mt-3 line-height-3">Окунитесь в мир соблазнительных ароматов и бархатистой кожи </p>
                         </div>
-                        <div class="text-900 font-bold text-3xl text-center mt-4 ">Feature Title</div>
-                        <p class="text-600 font-medium text-xl text-center mt-4">Vulputate eu scelerisque felis imperdiet proin. Eget arcu dictum varius duis at consectetur lorem donec.</p>
-
-                        <div class="grid mt-7 -mr-3 -ml-3">
-                            <div class="xs:col-12 sm:col-6 lg:col-3 p-4 flex flex-column text-center ">
-                                <img src="https://www.victoriassecret.com/p/280x373/tif/ed/d9/edd962a8ce864440a12eafa62c492201/112047177928_OF_F.jpg" alt="product" class="w-full h-full border-round">
-                                <div class="text-900 text-xl mt-4">Facilisis gravida neque</div>
-                                <p class="text-600 mt-3 line-height-3">Potenti nullam ac tortor vitae. Aliquet bibendum enim facilisis gravida neque convallis a cras semper.</p>
-                            </div>
-                            <div class="xs:col-12 sm:col-6 lg:col-3 p-4 flex flex-column text-center ">
-                                <img src="https://www.victoriassecret.com/p/504x672/png/zz/24/01/30/10/1123669165NI_OM_F.jpg" alt="product" class="w-full h-full border-round">
-                                <div class="text-900 text-xl mt-4">Facilisis gravida neque</div>
-                                <p class="text-600 mt-3 line-height-3">Potenti nullam ac tortor vitae. Aliquet bibendum enim facilisis gravida neque convallis a cras semper.</p>
-                            </div>
-                            <div class="xs:col-12 sm:col-6 lg:col-3 p-4 flex flex-column text-center">
-                                <img src="https://www.victoriassecret.com/p/760x1013/tif/zz/23/05/12/23/1123063554A2_OM_F.jpg" alt="product" class="w-full h-full border-round">
-                                <div class="text-900 text-xl mt-4">Facilisis gravida neque</div>
-                                <p class="text-600 mt-3 line-height-3">Potenti nullam ac tortor vitae. Aliquet bibendum enim facilisis gravida neque convallis a cras semper.</p>
-                            </div>
-                            <div class="xs:col-12 sm:col-6 lg:col-3 p-4 flex flex-column text-center ">
-                                <img src="https://www.victoriassecret.com/p/760x1013/tif/zz/23/06/08/03/1122916054A2_OM_F.jpg" alt="product" class="w-full h-full border-round">
-                                <div class="text-900 text-xl mt-4">Facilisis gravida neque</div>
-                                <p class="text-600 mt-3 line-height-3">Potenti nullam ac tortor vitae. Aliquet bibendum enim facilisis gravida neque convallis a cras semper.</p>
-                            </div>
+                        <div class="xs:col-12 sm:col-6 lg:col-3 p-4 flex flex-column text-center ">
+                            <img src="assets/vs/vs2.jpg" alt="product" class="w-full h-full border-round">
+                            <div class="text-900 text-xl mt-4">Белье Victoria's Secret: Символ Соблазна</div>
+                            <p class="text-600 mt-3 line-height-3">Раскройте свою сексуальность с элегантными линиями и обольстительными силуэтами</p>
+                        </div>
+                        <div class="xs:col-12 sm:col-6 lg:col-3 p-4 flex flex-column text-center">
+                            <img
+                                src="https://www.victoriassecret.com/p/760x1013/tif/zz/23/05/12/23/1123063554A2_OM_F.jpg"
+                                alt="product" class="w-full h-full border-round">
+                            <div class="text-900 text-xl mt-4">Аксессуары Victoria's Secret: Акценты Изящества</div>
+                            <p class="text-600 mt-3 line-height-3">Собирайте взгляды восхищения, излучайте уверенность в себе</p>
+                        </div>
+                        <div class="xs:col-12 sm:col-6 lg:col-3 p-4 flex flex-column text-center ">
+                            <img
+                                src="https://www.victoriassecret.com/p/760x1013/tif/zz/23/06/08/03/1122916054A2_OM_F.jpg"
+                                alt="product" class="w-full h-full border-round">
+                            <div class="text-900 text-xl mt-4">Пижамы Victoria's Secret: Объятия Уюта</div>
+                            <p class="text-600 mt-3 line-height-3">Погрузитесь в нежность и тепло каждую ночь. Сладких снов</p>
                         </div>
                     </div>
+                </div>
 
 
             </div>
 
-            <div class="surface-section px-4 py-8 md:px-6 lg:px-8">
+            <div id="bb" class="surface-section px-4 py-8 md:px-6 lg:px-8">
                 <div class="grid -mr-4 -ml-4 flex-column xl:flex-row">
                     <div class="col-12 xl:col-6 p-4">
                         <div class="bg-blue-100 border-round flex flex-column justify-content-center h-full p-6">
                             <svg version="1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 517.2 50">
                                 <title>Bath and Body Works</title>
-                                <path d="M26.2 18.5v-.1c4.6-1.1 6.7-4.6 6.7-8.3 0-5.5-3.2-9.8-10.8-9.8H0V39h21.6c6 0 12.8-3 12.8-11.1.1-4.9-3-8.6-8.2-9.4zM4 4h17.3c4.4 0 7.6 1.5 7.6 6.2 0 5.2-3.5 6.9-8.9 6.9H4V4zm17 31.4H4V20.8h17.9c4.7 0 8.2 1.6 8.2 7.2 0 5.3-3.9 7.4-9.1 7.4zm44.5-2.3V18.3c0-5.4-3.5-8.4-13-8.4-9.7 0-12.9 3.6-13.5 9.5h3.7c.3-4.5 3.3-6.2 9.7-6.2 6.6 0 9.4 1.5 9.4 5.5 0 2.8-1.1 3.3-9.9 3.7-6.2.3-14.1 1.2-14.1 8.8 0 6.3 6.2 8.5 11 8.5 9.3 0 12-3.8 13.2-5.6h.1c.1 2.2.3 5 4.4 5 1.3 0 2.6-.3 3.4-.4V36c-.7.1-1.4.1-2.1.1-1.7.1-2.3-.7-2.3-3zm-3.7-4.9c0 5.8-6.4 8.7-11.8 8.7-4.4 0-8.2-1.3-8.2-5.7 0-3.4 2.7-4.8 7.4-5.2 8.1-.8 10.8-1 12.6-2.1v4.3zM79.4 2h-4v8.9h-6.2v3h6.2v18.6c0 4.6 1.4 7 7.6 7 1.3 0 2.9-.1 4.4-.3v-3.4c-.8.2-2 .3-4 .3-3.3 0-4-1.1-4-3.6V13.9h8v-3h-8V2zm29.4 8c-6.3 0-10.5 3.4-11.7 6.4H97V0h-4v39.1h4V23.8c0-6.4 3.6-10.4 11.5-10.4 5.1 0 8.5 2 8.5 7.5v18.2h4V21.6c0-6.7-2.8-11.6-12.2-11.6zm57.6 12.3h-3.7c-.2 1.6-.9 4.9-2.1 6.5l-11.9-11.2c4-1.7 8.1-4.4 8.1-9.4 0-3.6-2.4-7.9-9.5-7.9-5.7 0-9.5 3.3-9.5 8 0 3.6 2.1 5.9 4.9 8.5C135.2 20 132 23 132 28.4c0 6.6 4.8 11.6 14.7 11.6 6.2 0 11.6-2.2 14.4-5.7l5.1 4.8h5.5l-8.3-7.8c2-3.1 3-6.9 3-9zM141.6 8.2c0-2.8 2.7-4.5 5.4-4.5 4.4 0 6.1 2.2 6.1 4.7 0 2.8-2.1 5-6.8 7.1-4.3-4.3-4.7-5.7-4.7-7.3zm5.3 28.4c-7.6 0-10.9-3.9-10.9-8 0-4.3 2.9-7.1 9-9.4l13.4 12.7c-3.4 3.6-6.9 4.7-11.5 4.7zM210 18.5v-.1c4.6-1.1 6.7-4.6 6.7-8.3 0-5.5-3.2-9.8-10.8-9.8h-22.1V39h21.6c6 0 12.8-3 12.8-11.1 0-4.9-3.1-8.6-8.2-9.4zM187.8 4h17.3c4.4 0 7.6 1.5 7.6 6.2 0 5.2-3.5 6.9-8.9 6.9h-16V4zm16.9 31.4h-16.9V20.8h17.9c4.7 0 8.2 1.6 8.2 7.2-.1 5.3-4 7.4-9.2 7.4zm33-25.4c-10.9 0-16.1 7.1-16.1 15s5.2 15 16.1 15c10.9 0 16.1-7.1 16.1-15s-5.2-15-16.1-15zm0 26.6c-7.6 0-12-4.8-12-11.6s4.4-11.6 12-11.6 12 4.8 12 11.6c.1 6.7-4.3 11.6-12 11.6zm47.5-20.1h-.1c-1.9-3.6-6.2-6.5-11.5-6.5-10.6 0-15.4 7.1-15.4 15 0 6.9 3.8 15 15.4 15 6.9 0 10.5-4.1 11.5-6.5h.1v5.6h4V0h-4v16.5zm-11.6 20.1c-8.2 0-11.4-6-11.4-11.6 0-7.2 5-11.6 11.4-11.6 8.2 0 11.9 5.8 11.9 11.6-.1 7.3-5.3 11.6-11.9 11.6zm34.9-2.3L297 10.8h-4.4l13.8 28.4-1.9 3.9c-1.3 2.8-2.7 3.5-5.6 3.5-1.1 0-2-.1-2.9-.1v3.4c1.2.1 2.6.1 3.9.1 4.5 0 6.2-1.2 8.3-5.7l15.4-33.5h-4.4l-10.7 23.5zm76.2-34l-10.9 33.4h-.1L362.2.3h-5l-11.5 33.4h-.1L334.9.3h-4.5L343.3 39h4.7l11.5-33h.1l11.7 33.1h4.7L389.1.4h-4.4zm20.1 9.7c-10.9 0-16.1 7.1-16.1 15s5.2 15 16.1 15c10.9 0 16.1-7.1 16.1-15s-5.2-15-16.1-15zm0 26.6c-7.6 0-12-4.8-12-11.6s4.4-11.6 12-11.6 12 4.8 12 11.6c0 6.7-4.4 11.6-12 11.6zm26-19.3h-.1v-6.5h-4V39h4V24.7c0-8 5.3-10.7 9.6-10.7 1.3 0 2.4.1 3.7.3v-4.1c-.6-.1-1.3-.2-2.4-.2-6.7 0-9.4 3.9-10.8 7.3zm43.7-6.5h-6l-17.3 13.7V0h-4v39.1h4V29l6.4-4.8 12.6 14.9h5.3l-14.9-17.5 13.9-10.8zm16.2 12c-8.6-1.1-10.5-1.7-10.5-4.7 0-3.9 3.9-4.8 8.2-4.8 5.9 0 8.7 1.3 9.7 5.9h3.7c-.5-5.9-4.2-9.2-13.4-9.2-8.2 0-12.2 3.5-12.2 8.4 0 5 3.1 7.1 11.9 7.9 8.8.9 10.8 2.1 10.8 4.9 0 4.2-3.8 5.4-9.4 5.4-7.2 0-9.9-1.6-10.6-6.3h-3.7c0 6.8 5.3 9.7 14.3 9.7 8.9 0 13.4-3.4 13.4-9 0-5.5-3.6-7-12.2-8.2zm21.6-13.1c-2.7 0-4.9 2.2-4.9 4.9s2.2 4.9 4.9 4.9 4.9-2.2 4.9-4.9-2.2-4.9-4.9-4.9zm0 9.2c-2.4 0-4.3-1.9-4.3-4.3s1.9-4.3 4.3-4.3 4.3 1.9 4.3 4.3c-.1 2.4-1.9 4.3-4.3 4.3zm2.3-5.6c0-1-.6-1.6-1.9-1.6h-2.2v5.8h.7v-2.6h1.2l1.7 2.6h.8l-1.8-2.6c.8-.1 1.5-.6 1.5-1.6zm-3.5 1v-2.1h1.5c.7 0 1.4.2 1.4 1s-.6 1.1-1.4 1.1h-1.5z" fill="#005699"/>
+                                <path
+                                    d="M26.2 18.5v-.1c4.6-1.1 6.7-4.6 6.7-8.3 0-5.5-3.2-9.8-10.8-9.8H0V39h21.6c6 0 12.8-3 12.8-11.1.1-4.9-3-8.6-8.2-9.4zM4 4h17.3c4.4 0 7.6 1.5 7.6 6.2 0 5.2-3.5 6.9-8.9 6.9H4V4zm17 31.4H4V20.8h17.9c4.7 0 8.2 1.6 8.2 7.2 0 5.3-3.9 7.4-9.1 7.4zm44.5-2.3V18.3c0-5.4-3.5-8.4-13-8.4-9.7 0-12.9 3.6-13.5 9.5h3.7c.3-4.5 3.3-6.2 9.7-6.2 6.6 0 9.4 1.5 9.4 5.5 0 2.8-1.1 3.3-9.9 3.7-6.2.3-14.1 1.2-14.1 8.8 0 6.3 6.2 8.5 11 8.5 9.3 0 12-3.8 13.2-5.6h.1c.1 2.2.3 5 4.4 5 1.3 0 2.6-.3 3.4-.4V36c-.7.1-1.4.1-2.1.1-1.7.1-2.3-.7-2.3-3zm-3.7-4.9c0 5.8-6.4 8.7-11.8 8.7-4.4 0-8.2-1.3-8.2-5.7 0-3.4 2.7-4.8 7.4-5.2 8.1-.8 10.8-1 12.6-2.1v4.3zM79.4 2h-4v8.9h-6.2v3h6.2v18.6c0 4.6 1.4 7 7.6 7 1.3 0 2.9-.1 4.4-.3v-3.4c-.8.2-2 .3-4 .3-3.3 0-4-1.1-4-3.6V13.9h8v-3h-8V2zm29.4 8c-6.3 0-10.5 3.4-11.7 6.4H97V0h-4v39.1h4V23.8c0-6.4 3.6-10.4 11.5-10.4 5.1 0 8.5 2 8.5 7.5v18.2h4V21.6c0-6.7-2.8-11.6-12.2-11.6zm57.6 12.3h-3.7c-.2 1.6-.9 4.9-2.1 6.5l-11.9-11.2c4-1.7 8.1-4.4 8.1-9.4 0-3.6-2.4-7.9-9.5-7.9-5.7 0-9.5 3.3-9.5 8 0 3.6 2.1 5.9 4.9 8.5C135.2 20 132 23 132 28.4c0 6.6 4.8 11.6 14.7 11.6 6.2 0 11.6-2.2 14.4-5.7l5.1 4.8h5.5l-8.3-7.8c2-3.1 3-6.9 3-9zM141.6 8.2c0-2.8 2.7-4.5 5.4-4.5 4.4 0 6.1 2.2 6.1 4.7 0 2.8-2.1 5-6.8 7.1-4.3-4.3-4.7-5.7-4.7-7.3zm5.3 28.4c-7.6 0-10.9-3.9-10.9-8 0-4.3 2.9-7.1 9-9.4l13.4 12.7c-3.4 3.6-6.9 4.7-11.5 4.7zM210 18.5v-.1c4.6-1.1 6.7-4.6 6.7-8.3 0-5.5-3.2-9.8-10.8-9.8h-22.1V39h21.6c6 0 12.8-3 12.8-11.1 0-4.9-3.1-8.6-8.2-9.4zM187.8 4h17.3c4.4 0 7.6 1.5 7.6 6.2 0 5.2-3.5 6.9-8.9 6.9h-16V4zm16.9 31.4h-16.9V20.8h17.9c4.7 0 8.2 1.6 8.2 7.2-.1 5.3-4 7.4-9.2 7.4zm33-25.4c-10.9 0-16.1 7.1-16.1 15s5.2 15 16.1 15c10.9 0 16.1-7.1 16.1-15s-5.2-15-16.1-15zm0 26.6c-7.6 0-12-4.8-12-11.6s4.4-11.6 12-11.6 12 4.8 12 11.6c.1 6.7-4.3 11.6-12 11.6zm47.5-20.1h-.1c-1.9-3.6-6.2-6.5-11.5-6.5-10.6 0-15.4 7.1-15.4 15 0 6.9 3.8 15 15.4 15 6.9 0 10.5-4.1 11.5-6.5h.1v5.6h4V0h-4v16.5zm-11.6 20.1c-8.2 0-11.4-6-11.4-11.6 0-7.2 5-11.6 11.4-11.6 8.2 0 11.9 5.8 11.9 11.6-.1 7.3-5.3 11.6-11.9 11.6zm34.9-2.3L297 10.8h-4.4l13.8 28.4-1.9 3.9c-1.3 2.8-2.7 3.5-5.6 3.5-1.1 0-2-.1-2.9-.1v3.4c1.2.1 2.6.1 3.9.1 4.5 0 6.2-1.2 8.3-5.7l15.4-33.5h-4.4l-10.7 23.5zm76.2-34l-10.9 33.4h-.1L362.2.3h-5l-11.5 33.4h-.1L334.9.3h-4.5L343.3 39h4.7l11.5-33h.1l11.7 33.1h4.7L389.1.4h-4.4zm20.1 9.7c-10.9 0-16.1 7.1-16.1 15s5.2 15 16.1 15c10.9 0 16.1-7.1 16.1-15s-5.2-15-16.1-15zm0 26.6c-7.6 0-12-4.8-12-11.6s4.4-11.6 12-11.6 12 4.8 12 11.6c0 6.7-4.4 11.6-12 11.6zm26-19.3h-.1v-6.5h-4V39h4V24.7c0-8 5.3-10.7 9.6-10.7 1.3 0 2.4.1 3.7.3v-4.1c-.6-.1-1.3-.2-2.4-.2-6.7 0-9.4 3.9-10.8 7.3zm43.7-6.5h-6l-17.3 13.7V0h-4v39.1h4V29l6.4-4.8 12.6 14.9h5.3l-14.9-17.5 13.9-10.8zm16.2 12c-8.6-1.1-10.5-1.7-10.5-4.7 0-3.9 3.9-4.8 8.2-4.8 5.9 0 8.7 1.3 9.7 5.9h3.7c-.5-5.9-4.2-9.2-13.4-9.2-8.2 0-12.2 3.5-12.2 8.4 0 5 3.1 7.1 11.9 7.9 8.8.9 10.8 2.1 10.8 4.9 0 4.2-3.8 5.4-9.4 5.4-7.2 0-9.9-1.6-10.6-6.3h-3.7c0 6.8 5.3 9.7 14.3 9.7 8.9 0 13.4-3.4 13.4-9 0-5.5-3.6-7-12.2-8.2zm21.6-13.1c-2.7 0-4.9 2.2-4.9 4.9s2.2 4.9 4.9 4.9 4.9-2.2 4.9-4.9-2.2-4.9-4.9-4.9zm0 9.2c-2.4 0-4.3-1.9-4.3-4.3s1.9-4.3 4.3-4.3 4.3 1.9 4.3 4.3c-.1 2.4-1.9 4.3-4.3 4.3zm2.3-5.6c0-1-.6-1.6-1.9-1.6h-2.2v5.8h.7v-2.6h1.2l1.7 2.6h.8l-1.8-2.6c.8-.1 1.5-.6 1.5-1.6zm-3.5 1v-2.1h1.5c.7 0 1.4.2 1.4 1s-.6 1.1-1.4 1.1h-1.5z"
+                                    fill="#005699"/>
                             </svg>
-                            <div class="text-yellow-900 text-3xl font-medium">Открой для себя Bath & Body Works</div>
-                            <p class="text-yellow-800 text-xl line-height-3">Vulputate eu scelerisque felis imperdiet proin. Eget arcu dictum varius duis at consectetur lorem donec.</p>
+                            <div class="text-yellow-900 text-3xl font-medium"> Попробуйте один раз и вы вернетесь за ним всегда</div>
+                            <p class="text-yellow-800 text-xl line-height-3">
+                                <span>
+                                    Bath & Body Works – это уникальный мир ароматов и красоты, где каждый может найти что-то особенное для дома и тела. Широкий ассортимент увлажняющих кремов, ароматических свечей, мистов и множества других продуктов, созданных для того, чтобы превратить вашу повседневную рутину в настоящий ритуал красоты и релаксации.
+                                    Каждый продукт Bath & Body Works разработан с любовью и заботой, чтобы дарить вам моменты радости и удовольствия. С невероятным разнообразием ароматов, от свежих и легких до теплых и уютных, вы обязательно найдете идеальный аромат, который будет радовать вас и ваших близких.
+                                    Не упустите возможность украсить свой дом и оживить его уникальными ароматами с помощью свечей, диффузоров и освежителей воздуха от Bath & Body Works. Создайте атмосферу уюта и комфорта, в которой каждый момент наполнен приятными воспоминаниями.
+                                    Посетите магазин Victoria's Secret Room и подарите себе и своим близким незабываемые впечатления и моменты радости. Позвольте Bath & Body Works стать частью вашей жизни, добавляя яркие краски и неповторимые ароматы в каждый день.
+                                </span>
+                            </p>
                         </div>
                     </div>
                     <div class="col-12 xl:col-6 p-4">
-                        <img src="https://cdn-fsly.yottaa.net/5d669b394f1bbf7cb77826ae/www.bathandbodyworks.com/v~4b.21a/on/demandware.static/-/Sites-BathAndBodyWorks-Library/default/dweac1a5ee/2023/sp2_000246914_000260176_can_3wtrop_sit_vn_01_00.jpg?yocs=w_A_" class="w-full" alt="product">
+                        <img
+                            src="https://cdn-fsly.yottaa.net/5d669b394f1bbf7cb77826ae/www.bathandbodyworks.com/v~4b.21a/on/demandware.static/-/Sites-BathAndBodyWorks-Library/default/dweac1a5ee/2023/sp2_000246914_000260176_can_3wtrop_sit_vn_01_00.jpg?yocs=w_A_"
+                            class="w-full" alt="product">
                     </div>
                     <div class="col-12 xl:col-6 p-4">
-                        <img src="https://cdn-fsly.yottaa.net/5d669b394f1bbf7cb77826ae/www.bathandbodyworks.com/v~4b.21a/on/demandware.static/-/Sites-bbw-storefront-catalog-en/default/dwc48345d9/sp2_000261416_000261894_bc_bsmss_sit_s_01_00.jpg?yocs=w_A_" class="w-full" alt="product">
+                        <img
+                            src="https://cdn-fsly.yottaa.net/5d669b394f1bbf7cb77826ae/www.bathandbodyworks.com/v~4b.21a/on/demandware.static/-/Sites-bbw-storefront-catalog-en/default/dwc48345d9/sp2_000261416_000261894_bc_bsmss_sit_s_01_00.jpg?yocs=w_A_"
+                            class="w-full" alt="product">
                     </div>
                     <div class="col-12 xl:col-6 p-4">
-                            <img src="https://cdn-fsly.yottaa.net/5d669b394f1bbf7cb77826ae/www.bathandbodyworks.com/v~4b.21a/on/demandware.static/-/Sites-BathAndBodyWorks-Library/default/dwc3f1dfa9/2023/sp2_000315611_000315614_bc_travelviznav_sit_vn_01_00.jpg?yocs=w_A_" class="w-full" alt="product">
+                        <img
+                            src="https://cdn-fsly.yottaa.net/5d669b394f1bbf7cb77826ae/www.bathandbodyworks.com/v~4b.21a/on/demandware.static/-/Sites-BathAndBodyWorks-Library/default/dwc3f1dfa9/2023/sp2_000315611_000315614_bc_travelviznav_sit_vn_01_00.jpg?yocs=w_A_"
+                            class="w-full" alt="product">
                     </div>
                 </div>
             </div>
@@ -191,4 +244,7 @@
     </div>
 </div>
 
-
+<ng-container *ngIf="stories && stories.data.length > 0">
+    <story-view [storyIsOpen]="storyIsOpen" [stories]="stories.data"
+                (closeStoryViewEmitter)="closeStory()"></story-view>
+</ng-container>

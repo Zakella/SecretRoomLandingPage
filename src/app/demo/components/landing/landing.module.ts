@@ -11,6 +11,7 @@ import {LogoComponent} from "../../../components/logo/logo.component";
 import {RippleModule} from "primeng/ripple";
 import {GalleriaModule} from "primeng/galleria";
 import {ImageModule} from "primeng/image";
+import {StoriesModule} from "../../../components/stories/stories.module";
 
 @NgModule({
     imports: [
@@ -23,7 +24,10 @@ import {ImageModule} from "primeng/image";
         LogoComponent,
         RippleModule,
         GalleriaModule,
-        ImageModule
+        ImageModule,
+        StoriesModule
+
+
     ],
     declarations: [LandingComponent, AnimateEnterDirective]
 })

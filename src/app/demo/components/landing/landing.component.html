@@ -75,8 +75,9 @@
                     class="col-12 md:col-4 flex flex-column gap-4 flex-order-1 md:flex-order-0 align-items-center md:align-items-start text-center md:text-left">
                     <span class="block text-900 font-bold text-4xl">Первый магазин в Молдове Victoria's Secret и Bath & Body Works</span>
                     <span class="block text-700 text-lg">Впервые в Молдове – магазин мировых брендов нижнего белья и косметики. Откройте для себя мир изысканного стиля которые дарят нам лучшие бренды мира.
+                        Только оригинальная продукция в экслклюзивном магазине Victoria's Secret Room.
                     </span>
-                    <span class="block text-700 font-bold text-lg"> Торговый центр Атриум, 2 этаж. Victoria's Secret Room</span>
+                    <span class="block text-700 font-bold text-lg"> Торговый центр Атриум, 2 этаж</span>
                     <span class="block text-700 font-bold text-lg"> Доставка по всей Молдове</span>
                     <ul class="flex flex-wrap gap-5 list-none p-0">
                         <li class="flex align-items-center">
@@ -88,7 +89,7 @@
                             <span class="text-900 font-semibold">Bath & Body Works</span>
                         </li>
                     </ul>
-                    <button pButton pRipple type="button" label="Live Preview" icon="pi pi-arrow-right" iconPos="right"
+                    <button pButton pRipple type="button" label="Смотреть видео превью" icon="pi pi-arrow-right" iconPos="right"
                             class="w-12rem p-button-outlined vs-button"
                             (click)="openStories()"
                     ></button>
@@ -98,16 +99,27 @@
 
                 <div class="col-12 md:col-7 flex-order-0 md:flex-order-1 mb-6 md:mb-0 border-round">
 
-                    <p-galleria [value]="images" [responsiveOptions]="galleriaResponsiveOptions"
-                                [containerStyle]="{'max-width': '800px', 'margin':'auto'}" [numVisible]="6"
-                                [circular]="true">
+<!--                    <p-galleria [value]="images" [responsiveOptions]="galleriaResponsiveOptions"-->
+<!--                                [containerStyle]="{'max-width': '800px', 'margin':'auto'}" [numVisible]="6"-->
+<!--                                [circular]="true"-->
+<!--                                [showItemNavigators]="true"-->
+<!--                    >-->
+<!--                        <ng-template pTemplate="item" let-item>-->
+<!--                            <p-image [src]="item.itemImageSrc"alt="Image" width="600"  [preview]="true"></p-image>-->
+<!--&lt;!&ndash;                            <img [src]="item.itemImageSrc"  style="width: 35vw; height: auto;"/>&ndash;&gt;-->
+<!--                        </ng-template>-->
+<!--                        <ng-template pTemplate="thumbnail" let-item>-->
+<!--                            <div class="grid nogutter justify-center">-->
+<!--                                <img [src]="item.thumbnailImageSrc" style="display: block;"/>-->
+<!--                            </div>-->
+<!--                        </ng-template>-->
+<!--                    </p-galleria>-->
+
+                    <p-galleria [value]="images" [numVisible]="5" [circular]="true" [showItemNavigators]="true" [showThumbnails]="false"
+                                [responsiveOptions]="galleriaResponsiveOptions" [containerStyle]="{ 'max-width': '640px' }">
                         <ng-template pTemplate="item" let-item>
-                            <img [src]="item.itemImageSrc" style="width: 100%; display: block;"/>
-                        </ng-template>
-                        <ng-template pTemplate="thumbnail" let-item>
-                            <div class="grid nogutter justify-center">
-                                <img [src]="item.thumbnailImageSrc" style="display: block;"/>
-                            </div>
+                          <img [src]="item.itemImageSrc" style="width: 100%; display: block;" />
+<!--                            <p-image [src]="item.itemImageSrc" alt="Image" [preview]="true" [style]="{'width': '100%', 'max-width': '600px', 'display': 'block', 'height': 'auto'}"></p-image>-->
                         </ng-template>
                     </p-galleria>
                     <!--                    <img animateEnter="moveinright"-->
@@ -159,25 +171,25 @@
 
                     <div class="grid mt-7 -mr-3 -ml-3">
                         <div class="xs:col-12 sm:col-6 lg:col-3 p-4 flex flex-column text-center ">
-                            <img src="assets/vs/VS1.jpg" alt="product" class="w-full h-full border-round">
+                            <img src="assets/store/mag4.jpeg" alt="product" class="w-full h-full border-round">
                             <div class="text-900 text-xl mt-4">Косметические наборы Victoria's Secret: Роскошь Каждого Дня</div>
                             <p class="text-600 mt-3 line-height-3">Окунитесь в мир соблазнительных ароматов и бархатистой кожи </p>
                         </div>
                         <div class="xs:col-12 sm:col-6 lg:col-3 p-4 flex flex-column text-center ">
-                            <img src="assets/vs/vs2.jpg" alt="product" class="w-full h-full border-round">
+                            <img src="assets/store/mag2.jpeg" alt="product" class="w-full h-full border-round">
                             <div class="text-900 text-xl mt-4">Белье Victoria's Secret: Символ Соблазна</div>
                             <p class="text-600 mt-3 line-height-3">Раскройте свою сексуальность с элегантными линиями и обольстительными силуэтами</p>
                         </div>
                         <div class="xs:col-12 sm:col-6 lg:col-3 p-4 flex flex-column text-center">
                             <img
-                                src="https://www.victoriassecret.com/p/760x1013/tif/zz/23/05/12/23/1123063554A2_OM_F.jpg"
+                                src="assets/store/acces1.jpg"
                                 alt="product" class="w-full h-full border-round">
                             <div class="text-900 text-xl mt-4">Аксессуары Victoria's Secret: Акценты Изящества</div>
                             <p class="text-600 mt-3 line-height-3">Собирайте взгляды восхищения, излучайте уверенность в себе</p>
                         </div>
                         <div class="xs:col-12 sm:col-6 lg:col-3 p-4 flex flex-column text-center ">
                             <img
-                                src="https://www.victoriassecret.com/p/760x1013/tif/zz/23/06/08/03/1122916054A2_OM_F.jpg"
+                                src="assets/store/mag5.jpeg"
                                 alt="product" class="w-full h-full border-round">
                             <div class="text-900 text-xl mt-4">Пижамы Victoria's Secret: Объятия Уюта</div>
                             <p class="text-600 mt-3 line-height-3">Погрузитесь в нежность и тепло каждую ночь. Сладких снов</p>
@@ -211,12 +223,12 @@
                     </div>
                     <div class="col-12 xl:col-6 p-4">
                         <img
-                            src="https://cdn-fsly.yottaa.net/5d669b394f1bbf7cb77826ae/www.bathandbodyworks.com/v~4b.21a/on/demandware.static/-/Sites-BathAndBodyWorks-Library/default/dweac1a5ee/2023/sp2_000246914_000260176_can_3wtrop_sit_vn_01_00.jpg?yocs=w_A_"
+                            src="assets/store/bb1.jpeg"
                             class="w-full" alt="product">
                     </div>
                     <div class="col-12 xl:col-6 p-4">
                         <img
-                            src="https://cdn-fsly.yottaa.net/5d669b394f1bbf7cb77826ae/www.bathandbodyworks.com/v~4b.21a/on/demandware.static/-/Sites-bbw-storefront-catalog-en/default/dwc48345d9/sp2_000261416_000261894_bc_bsmss_sit_s_01_00.jpg?yocs=w_A_"
+                            src="assets/store/mag6.jpeg"
                             class="w-full" alt="product">
                     </div>
                     <div class="col-12 xl:col-6 p-4">

@@ -7,6 +7,8 @@ import {StoryModel} from "../../../components/stories/story.model";
 import {STORIES} from "../../../components/stories/stories";
 import {StoriesService} from "../../../components/stories/stories.service";
 import {takeUntil} from "rxjs/operators";
+import {TranslocoService} from "@ngneat/transloco";
+import {SelectButtonChangeEvent} from "primeng/selectbutton";
 
 @Component({
     templateUrl: './landing.component.html',
@@ -22,6 +24,10 @@ export class LandingComponent implements OnInit, OnDestroy {
     stories: StoryModel = STORIES;
     storyIsOpen = false;
     unSub: Subject<void> = new Subject<void>();
+
+    stateOptions: any[] = [{label: 'Ro', value: 'ro'}, {label: 'Ru', value: 'ru'}];
+
+    value: string = 'ro';
 
     galleriaResponsiveOptions: any[] = [
         {
@@ -43,8 +49,9 @@ export class LandingComponent implements OnInit, OnDestroy {
     ];
 
 
+
     constructor(public router: Router, private layoutService: LayoutService, private photoService: PhotoService,
-                private storiesService: StoriesService) {
+                private storiesService: StoriesService, private translocoService: TranslocoService) {
         this.subscription = this.layoutService.configUpdate$.subscribe(config => {
             this.darkMode = config.colorScheme === 'dark' || config.colorScheme === 'dim' ? true : false;
         });
@@ -87,5 +94,14 @@ export class LandingComponent implements OnInit, OnDestroy {
 
     openStories() {
         this.storyIsOpen = true;
+    }
+
+    goToInstagram() {
+        window.location.href = 'https://www.instagram.com/secret_room.moldova/';
+    }
+
+    langChange(language: SelectButtonChangeEvent) {
+        this.translocoService.setActiveLang(language.value);
+
     }
 }

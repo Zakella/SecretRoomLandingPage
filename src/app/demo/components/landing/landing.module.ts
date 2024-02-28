@@ -12,6 +12,9 @@ import {RippleModule} from "primeng/ripple";
 import {GalleriaModule} from "primeng/galleria";
 import {ImageModule} from "primeng/image";
 import {StoriesModule} from "../../../components/stories/stories.module";
+import {SelectButtonModule} from "primeng/selectbutton";
+import {FormsModule} from "@angular/forms";
+import {TranslocoPipe} from "@ngneat/transloco";
 
 @NgModule({
     imports: [
@@ -25,7 +28,10 @@ import {StoriesModule} from "../../../components/stories/stories.module";
         RippleModule,
         GalleriaModule,
         ImageModule,
-        StoriesModule
+        StoriesModule,
+        SelectButtonModule,
+        FormsModule,
+        TranslocoPipe
 
 
     ],

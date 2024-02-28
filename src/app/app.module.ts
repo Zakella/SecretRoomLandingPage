@@ -4,6 +4,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AppLayoutModule } from './layout/app.layout.module';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import { HttpClientModule } from '@angular/common/http';
+import { TranslocoRootModule } from './transloco-root.module';
 
 @NgModule({
     declarations: [
@@ -11,7 +13,9 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
     ],
     imports: [
         AppRoutingModule,
-        AppLayoutModule
+        AppLayoutModule,
+        HttpClientModule,
+        TranslocoRootModule
 
     ],
     providers: [

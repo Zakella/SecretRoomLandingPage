@@ -47,7 +47,7 @@
             username: ${{ secrets.USERNAME }}
             key: ${{ secrets.SHH_PRIVATE_KEY }}
             script: |
-              cd ~/secretroom-app/SecretRoomLandingPage
+              cd ~/secret-room-landing/SecretRoomLandingPage
               git pull
               docker-compose pull secret-room-landing
               docker-compose down

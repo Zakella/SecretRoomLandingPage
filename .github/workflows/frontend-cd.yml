@@ -52,3 +52,4 @@
               docker-compose pull secret-room-landing
               docker-compose down
               docker-compose up -d
+

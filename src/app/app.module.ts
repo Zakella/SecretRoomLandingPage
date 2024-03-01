@@ -3,6 +3,8 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AppLayoutModule } from './layout/app.layout.module';
+import { HttpClientModule } from '@angular/common/http';
+import { TranslocoRootModule } from './transloco-root.module';
 
 @NgModule({
     declarations: [
@@ -10,7 +12,9 @@ import { AppLayoutModule } from './layout/app.layout.module';
     ],
     imports: [
         AppRoutingModule,
-        AppLayoutModule
+        AppLayoutModule,
+        HttpClientModule,
+        TranslocoRootModule
     ],
     providers: [
         { provide: LocationStrategy, useClass: HashLocationStrategy }

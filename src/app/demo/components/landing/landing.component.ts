@@ -48,6 +48,44 @@ export class LandingComponent implements OnInit, OnDestroy {
         }
     ];
 
+    private backgroundImages: { src: string; title: string; description: string; }[] = [
+        {
+            src: 'assets/store/b1.jpeg',
+            title: 'VSBeauty',
+            description: 'VSBeautyDisc',
+        },
+        {
+            src: 'assets/store/l1.jpeg',
+            title: 'Langerie',
+            description: 'LingerieDisc',
+        },
+
+        {
+            src: 'assets/store/p1.jpeg',
+            title: 'Perfume',
+            description: 'PerfumeDisc',
+        },
+
+        {
+            src: 'assets/store/mag5.jpeg',
+            title: 'Sleep',
+            description: 'SleepDisc',
+        },
+
+
+        // {
+        //     src: 'assets/store/acces1.jpg',
+        //     title: 'Accessories',
+        //     description: 'AccessoriesDisc',
+        // },
+        // ... добавьте больше изображений по мере необходимости ...
+    ];
+
+    private currentImageIndex: number = 0;
+    currentBackground: string = this.backgroundImages[this.currentImageIndex].src;
+    currentTitle: string = this.backgroundImages[this.currentImageIndex].title;
+    currentDescription: string = this.backgroundImages[this.currentImageIndex].description;
+
 
 
     constructor(public router: Router, private layoutService: LayoutService, private photoService: PhotoService,
@@ -103,5 +141,22 @@ export class LandingComponent implements OnInit, OnDestroy {
     langChange(language: SelectButtonChangeEvent) {
         this.translocoService.setActiveLang(language.value);
 
+    }
+
+
+    nextBackground(): void {
+        this.currentImageIndex = (this.currentImageIndex + 1) % this.backgroundImages.length;
+        this.updateBackgroundDetails();
+    }
+
+    previousBackground(): void {
+        this.currentImageIndex = (this.currentImageIndex - 1 + this.backgroundImages.length) % this.backgroundImages.length;
+        this.updateBackgroundDetails();
+    }
+
+    private updateBackgroundDetails(): void {
+        this.currentBackground = this.backgroundImages[this.currentImageIndex].src;
+        this.currentTitle = this.backgroundImages[this.currentImageIndex].title;
+        this.currentDescription = this.backgroundImages[this.currentImageIndex].description;
     }
 }

@@ -109,21 +109,7 @@
 
                 <div class="col-12 md:col-7 flex-order-0 md:flex-order-1 mb-6 md:mb-0 border-round">
 
-                    <!--                    <p-galleria [value]="images" [responsiveOptions]="galleriaResponsiveOptions"-->
-                    <!--                                [containerStyle]="{'max-width': '800px', 'margin':'auto'}" [numVisible]="6"-->
-                    <!--                                [circular]="true"-->
-                    <!--                                [showItemNavigators]="true"-->
-                    <!--                    >-->
-                    <!--                        <ng-template pTemplate="item" let-item>-->
-                    <!--                            <p-image [src]="item.itemImageSrc"alt="Image" width="600"  [preview]="true"></p-image>-->
-                    <!--&lt;!&ndash;                            <img [src]="item.itemImageSrc"  style="width: 35vw; height: auto;"/>&ndash;&gt;-->
-                    <!--                        </ng-template>-->
-                    <!--                        <ng-template pTemplate="thumbnail" let-item>-->
-                    <!--                            <div class="grid nogutter justify-center">-->
-                    <!--                                <img [src]="item.thumbnailImageSrc" style="display: block;"/>-->
-                    <!--                            </div>-->
-                    <!--                        </ng-template>-->
-                    <!--                    </p-galleria>-->
+
 
                     <p-galleria [value]="images" [numVisible]="5" [circular]="true" [showItemNavigators]="true"
                                 [showThumbnails]="false"
@@ -134,9 +120,7 @@
                             <!--                            <p-image [src]="item.itemImageSrc" alt="Image" [preview]="true" [style]="{'width': '100%', 'max-width': '600px', 'display': 'block', 'height': 'auto'}"></p-image>-->
                         </ng-template>
                     </p-galleria>
-                    <!--                    <img animateEnter="moveinright"-->
-                    <!--                        src="assets/demo/images/landing/{{darkMode ? 'dashboard-dark' : 'dashboard-light'}}.png" alt=""-->
-                    <!--                        class="w-full h-full border-round shadow-2 animation-duration-1000 animation-ease-out">-->
+
                 </div>
             </div>
 
@@ -234,7 +218,7 @@
             </div>
 
 
-            <div class="surface-section px-4 py-8 md:px-6 lg:px-8">
+            <div id="bb" class="surface-section px-4 py-8 md:px-6 lg:px-8">
                 <div class="grid">
                     <div class="col-12 lg:col-6">
                         <img attr.src="assets/store/bathandbody/{{imagesBB[selectedImageIndexBB]}}" class="mb-3 w-full" />

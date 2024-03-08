@@ -86,7 +86,8 @@ export class LandingComponent implements OnInit, OnDestroy {
     currentTitle: string = this.backgroundImages[this.currentImageIndex].title;
     currentDescription: string = this.backgroundImages[this.currentImageIndex].description;
 
-
+    imagesBB: string[] = [];
+    selectedImageIndexBB: number = 0;
 
     constructor(public router: Router, private layoutService: LayoutService, private photoService: PhotoService,
                 private storiesService: StoriesService, private translocoService: TranslocoService) {
@@ -99,6 +100,14 @@ export class LandingComponent implements OnInit, OnDestroy {
         this.photoService.getImages().then(images => {
             this.images = images;
         });
+
+        this.imagesBB = [
+            'bb5.jpg',
+            'bb6.jpg',
+            'bb7.jpg',
+            'bb8.jpg'
+        ];
+
     }
 
     ngOnDestroy() {
